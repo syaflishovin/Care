@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B11032129CC0F3B0069AF3C /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B11032029CC0F3B0069AF3C /* Animation.json */; };
+		0B11032329CCC2650069AF3C /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11032229CCC2650069AF3C /* ScheduleModel.swift */; };
 		0BA3655E29CABE2D0053A944 /* Care Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0BA3655D29CABE2D0053A944 /* Care Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BA3656329CABE2D0053A944 /* CareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3656229CABE2D0053A944 /* CareApp.swift */; };
 		0BA3656529CABE2D0053A944 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3656429CABE2D0053A944 /* ContentView.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		0B11032029CC0F3B0069AF3C /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
+		0B11032229CCC2650069AF3C /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		0BA3655729CABE2D0053A944 /* Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Care.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA3655D29CABE2D0053A944 /* Care Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Care Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA3656229CABE2D0053A944 /* CareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareApp.swift; sourceTree = "<group>"; };
@@ -108,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B11032429CCC2720069AF3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B11032229CCC2650069AF3C /* ScheduleModel.swift */,
+				0BA3659529CABEAD0053A944 /* UtilsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0BA3655029CABE2D0053A944 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				0B11032029CC0F3B0069AF3C /* Animation.json */,
-				0BA3659229CABE6F0053A944 /* Models */,
+				0B11032429CCC2720069AF3C /* Models */,
+				0BA3659229CABE6F0053A944 /* View Models */,
 				0BA3656229CABE2D0053A944 /* CareApp.swift */,
 				0BA3659029CABE590053A944 /* Views */,
 				0BA3656629CABE2E0053A944 /* Assets.xcassets */,
@@ -178,13 +190,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0BA3659229CABE6F0053A944 /* Models */ = {
+		0BA3659229CABE6F0053A944 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				0BA3659529CABEAD0053A944 /* UtilsModel.swift */,
 				0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */,
 			);
-			path = Models;
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +367,7 @@
 				0BA3659629CABEAD0053A944 /* UtilsModel.swift in Sources */,
 				0BA3659B29CAC13E0053A944 /* HomeScheduleRunningView.swift in Sources */,
 				0BA3659D29CAC1550053A944 /* HomeNoScheduleView.swift in Sources */,
+				0B11032329CCC2650069AF3C /* ScheduleModel.swift in Sources */,
 				0BA3659F29CAE8AC0053A944 /* LottieViewModel.swift in Sources */,
 				0BA3656329CABE2D0053A944 /* CareApp.swift in Sources */,
 				0BA3659429CABE800053A944 /* ScheduleView.swift in Sources */,
