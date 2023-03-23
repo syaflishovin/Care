@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let endDate = UserDefaults.standard.string(forKey: "endDate")
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if let _ = endDate {
+            HomeScheduleRunningView()
+        } else {
+            HomeNoScheduleView()
         }
-        .padding()
     }
 }
 

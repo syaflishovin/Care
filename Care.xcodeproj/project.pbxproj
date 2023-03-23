@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B11032129CC0F3B0069AF3C /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B11032029CC0F3B0069AF3C /* Animation.json */; };
 		0BA3655E29CABE2D0053A944 /* Care Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0BA3655D29CABE2D0053A944 /* Care Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BA3656329CABE2D0053A944 /* CareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3656229CABE2D0053A944 /* CareApp.swift */; };
 		0BA3656529CABE2D0053A944 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3656429CABE2D0053A944 /* ContentView.swift */; };
@@ -15,6 +16,12 @@
 		0BA3657429CABE2E0053A944 /* Care_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3657329CABE2E0053A944 /* Care_Watch_AppTests.swift */; };
 		0BA3657E29CABE2E0053A944 /* Care_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3657D29CABE2E0053A944 /* Care_Watch_AppUITests.swift */; };
 		0BA3658029CABE2E0053A944 /* Care_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3657F29CABE2E0053A944 /* Care_Watch_AppUITestsLaunchTests.swift */; };
+		0BA3659429CABE800053A944 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659329CABE800053A944 /* ScheduleView.swift */; };
+		0BA3659629CABEAD0053A944 /* UtilsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659529CABEAD0053A944 /* UtilsModel.swift */; };
+		0BA3659929CAC10F0053A944 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 0BA3659829CAC10F0053A944 /* SDWebImageLottieCoder */; };
+		0BA3659B29CAC13E0053A944 /* HomeScheduleRunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659A29CAC13E0053A944 /* HomeScheduleRunningView.swift */; };
+		0BA3659D29CAC1550053A944 /* HomeNoScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659C29CAC1550053A944 /* HomeNoScheduleView.swift */; };
+		0BA3659F29CAE8AC0053A944 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B11032029CC0F3B0069AF3C /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 		0BA3655729CABE2D0053A944 /* Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Care.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA3655D29CABE2D0053A944 /* Care Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Care Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA3656229CABE2D0053A944 /* CareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareApp.swift; sourceTree = "<group>"; };
@@ -67,6 +75,11 @@
 		0BA3657929CABE2E0053A944 /* Care Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Care Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA3657D29CABE2E0053A944 /* Care_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Care_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		0BA3657F29CABE2E0053A944 /* Care_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Care_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0BA3659329CABE800053A944 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		0BA3659529CABEAD0053A944 /* UtilsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsModel.swift; sourceTree = "<group>"; };
+		0BA3659A29CAC13E0053A944 /* HomeScheduleRunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScheduleRunningView.swift; sourceTree = "<group>"; };
+		0BA3659C29CAC1550053A944 /* HomeNoScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoScheduleView.swift; sourceTree = "<group>"; };
+		0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA3659929CAC10F0053A944 /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,8 +132,10 @@
 		0BA3656129CABE2D0053A944 /* Care Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				0B11032029CC0F3B0069AF3C /* Animation.json */,
+				0BA3659229CABE6F0053A944 /* Models */,
 				0BA3656229CABE2D0053A944 /* CareApp.swift */,
-				0BA3656429CABE2D0053A944 /* ContentView.swift */,
+				0BA3659029CABE590053A944 /* Views */,
 				0BA3656629CABE2E0053A944 /* Assets.xcassets */,
 				0BA3656829CABE2E0053A944 /* Preview Content */,
 			);
@@ -149,6 +165,26 @@
 				0BA3657F29CABE2E0053A944 /* Care_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "Care Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		0BA3659029CABE590053A944 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BA3656429CABE2D0053A944 /* ContentView.swift */,
+				0BA3659C29CAC1550053A944 /* HomeNoScheduleView.swift */,
+				0BA3659A29CAC13E0053A944 /* HomeScheduleRunningView.swift */,
+				0BA3659329CABE800053A944 /* ScheduleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BA3659229CABE6F0053A944 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BA3659529CABEAD0053A944 /* UtilsModel.swift */,
+				0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +220,9 @@
 			dependencies = (
 			);
 			name = "Care Watch App";
+			packageProductDependencies = (
+				0BA3659829CAC10F0053A944 /* SDWebImageLottieCoder */,
+			);
 			productName = "Care Watch App";
 			productReference = 0BA3655D29CABE2D0053A944 /* Care Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +298,9 @@
 				Base,
 			);
 			mainGroup = 0BA3655029CABE2D0053A944;
+			packageReferences = (
+				0BA3659729CAC10F0053A944 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
+			);
 			productRefGroup = 0BA3655829CABE2D0053A944 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +327,7 @@
 			files = (
 				0BA3656A29CABE2E0053A944 /* Preview Assets.xcassets in Resources */,
 				0BA3656729CABE2E0053A944 /* Assets.xcassets in Resources */,
+				0B11032129CC0F3B0069AF3C /* Animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +353,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BA3656529CABE2D0053A944 /* ContentView.swift in Sources */,
+				0BA3659629CABEAD0053A944 /* UtilsModel.swift in Sources */,
+				0BA3659B29CAC13E0053A944 /* HomeScheduleRunningView.swift in Sources */,
+				0BA3659D29CAC1550053A944 /* HomeNoScheduleView.swift in Sources */,
+				0BA3659F29CAE8AC0053A944 /* LottieViewModel.swift in Sources */,
 				0BA3656329CABE2D0053A944 /* CareApp.swift in Sources */,
+				0BA3659429CABE800053A944 /* ScheduleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +728,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0BA3659729CAC10F0053A944 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0BA3659829CAC10F0053A944 /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BA3659729CAC10F0053A944 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0BA3655129CABE2D0053A944 /* Project object */;
 }

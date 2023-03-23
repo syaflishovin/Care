@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "librlottie-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/librlottie-Xcode.git",
+      "state" : {
+        "revision" : "4ae1ba205910c804ee2d4cd7dd7f122964fe3aad",
+        "version" : "0.2.1"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "fb50c1d20f24db5322b2f8f379de3618f75fe08e",
+        "version" : "5.15.5"
+      }
+    },
+    {
+      "identity" : "sdwebimagelottiecoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageLottieCoder",
+      "state" : {
+        "revision" : "c9f65679a9b0510b89673507f548a7c0f17ba95f",
+        "version" : "0.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
