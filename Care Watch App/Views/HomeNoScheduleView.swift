@@ -9,26 +9,23 @@ import SwiftUI
 
 struct HomeNoScheduleView: View {
     var body: some View {
-        NavigationView {
-            VStack(
-                alignment: .leading,
-                spacing: 0
-            ) {
-                ScrollView {
-                    Text("It's another day at the Academy. Don't forget to rest your eyes every 20 minutes with us!")
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity)
-                        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
-                    
-                    NavigationLink(destination: ScheduleView()) {
-                        Text("Start")
-                    }
-                    .tint(.accentColor)
-                    .clipShape(Capsule())
+        VStack(
+            alignment: .leading,
+            spacing: 0
+        ) {
+            ScrollView {
+                Text("It's another day at the Academy. Don't forget to rest your eyes every 20 minutes with us!")
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity)
+                    .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+                
+                NavigationLink(destination: ScheduleView()) {
+                    Text("Start")
                 }
+                .tint(.accentColor)
+                .clipShape(Capsule())
             }
-            .navigationTitle("Twenty")
         }
         .edgesIgnoringSafeArea(.bottom)
     }

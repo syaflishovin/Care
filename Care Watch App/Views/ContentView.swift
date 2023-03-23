@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let endDate = UserDefaults.standard.string(forKey: "endDate")
+    @State private var endDate = UserDefaults.standard.object(forKey: "endDate") as? Date
+    
+    @State private var scheduleExists = false
     
     var body: some View {
-        if let _ = endDate {
-            HomeScheduleRunningView()
+        NavigationView {
+            VStack {
+                if scheduleExists {
+                    HomeScheduleRunningView()
+                } else {
+                    HomeNoScheduleView()
+                }
+            }
+            .navigationTitle("Care")
+        }
+        .onAppear() {
+            validateEndDate()
+        }
+    }
+    
+    func validateEndDate() {
+        let now = Date()
+        
+        if let end = endDate {
+            if end > now {
+                scheduleExists = true
+            }
         } else {
-            HomeNoScheduleView()
+            scheduleExists = false
         }
     }
 }

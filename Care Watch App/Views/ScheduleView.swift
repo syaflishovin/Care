@@ -64,13 +64,13 @@ struct ScheduleView: View {
             .clipShape(Capsule())
             .disabled(isButtonEnabled)
 
-//            NavigationLink(destination: ContentView()) {
-//                Text("Schedule now")
-//            }
-//            .onSubmit {
-//                let endDate = utils.getEndDate(hours: selectedHours, minutes: selectedMinutes)
-//                UserDefaults.standard.set(endDate, forKey: "endDate")
-//            }
+            NavigationLink(destination: ContentView()) {
+                Text("Schedule now")
+            }
+            .onSubmit {
+                let endDate = utils.getEndDate(hours: selectedHours, minutes: selectedMinutes)
+                UserDefaults.standard.set(endDate, forKey: "endDate")
+            }
         }
         .edgesIgnoringSafeArea(.bottom)
     }

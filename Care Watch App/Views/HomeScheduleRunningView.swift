@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeScheduleRunningView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     @ObservedObject private var viewModel = LottieViewModel()
     @ObservedObject private var utils = UtilsModel()
     
@@ -56,11 +58,17 @@ struct HomeScheduleRunningView: View {
         }
         .edgesIgnoringSafeArea(.bottom)
         .onAppear(perform: {
-            if let end = UserDefaults.standard.object(forKey: "endDate") as? Date {
-                remainingTime = utils.getRemainderTime(end: end)
-                updateTimer(remaining: remainingTime)
-            }
+            extractEndDate()
         })
+    }
+    
+    func extractEndDate() {
+        if let end = UserDefaults.standard.object(forKey: "endDate") as? Date {
+            remainingTime = utils.getRemainderTime(end: end)
+            updateTimer(remaining: remainingTime)
+        } else {
+            
+        }
     }
     
     func updateTimer(remaining: Int) {
