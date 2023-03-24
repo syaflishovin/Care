@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeNoScheduleView: View {
+    
     var body: some View {
         VStack(
             alignment: .leading,
