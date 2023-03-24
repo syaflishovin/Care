@@ -10,6 +10,7 @@ import SwiftUI
 struct ScheduleView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject private var utils = UtilsModel()
+    @EnvironmentObject var scheduleModel: ScheduleModel
     
     @State private var selectedHours: Int = 4
     @State private var selectedMinutes: Int = 0
@@ -58,19 +59,13 @@ struct ScheduleView: View {
             ) {
                 let endDate = utils.getEndDate(hours: selectedHours, minutes: selectedMinutes)
                 UserDefaults.standard.set(endDate, forKey: "endDate")
+                scheduleModel.scheduleEndDate = endDate
+                scheduleModel.isScheduleActive = true
                 self.presentationMode.wrappedValue.dismiss()
             }
             .tint(.accentColor)
             .clipShape(Capsule())
             .disabled(isButtonEnabled)
-
-            NavigationLink(destination: ContentView()) {
-                Text("Schedule now")
-            }
-            .onSubmit {
-                let endDate = utils.getEndDate(hours: selectedHours, minutes: selectedMinutes)
-                UserDefaults.standard.set(endDate, forKey: "endDate")
-            }
         }
         .edgesIgnoringSafeArea(.bottom)
     }
