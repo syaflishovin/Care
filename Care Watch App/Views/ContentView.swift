@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var endDate = UserDefaults.standard.object(forKey: "endDate") as? Date
-    
-    @State private var scheduleExists = false
+    @ObservedObject var scheduleModel = ScheduleModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                if scheduleExists {
+                if scheduleModel.isScheduleActive {
                     HomeScheduleRunningView()
                 } else {
                     HomeNoScheduleView()
@@ -23,26 +21,12 @@ struct ContentView: View {
             }
             .navigationTitle("Care")
         }
-        .onAppear() {
-            validateEndDate()
-        }
-    }
-    
-    func validateEndDate() {
-        let now = Date()
-        
-        if let end = endDate {
-            if end > now {
-                scheduleExists = true
-            }
-        } else {
-            scheduleExists = false
-        }
+        .environmentObject(scheduleModel)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ScheduleModel())
     }
 }

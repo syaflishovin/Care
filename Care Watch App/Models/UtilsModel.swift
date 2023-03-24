@@ -50,10 +50,4 @@ class UtilsModel: ObservableObject {
             return 0
         }
     }
-    
-    func getRemainderTime(end: Date) -> Int {
-        let currentDate = Date()
-        let remainder = end.timeIntervalSince(currentDate)
-        return Int(remainder)
-    }
 }
