@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ContentView: View {
     @ObservedObject var scheduleModel = ScheduleModel()
@@ -20,6 +21,18 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Care")
+        }
+        .onAppear() {
+            UNUserNotificationCenter.current()
+                .requestAuthorization(options: [.alert,.sound,.badge])
+            { (success, error) in
+                if success{
+                    print("All set")
+                } else if let error = error {
+                    print(error.localizedDescription)
+                    
+                }
+            }
         }
         .environmentObject(scheduleModel)
     }

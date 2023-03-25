@@ -23,6 +23,12 @@
 		0BA3659B29CAC13E0053A944 /* HomeScheduleRunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659A29CAC13E0053A944 /* HomeScheduleRunningView.swift */; };
 		0BA3659D29CAC1550053A944 /* HomeNoScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659C29CAC1550053A944 /* HomeNoScheduleView.swift */; };
 		0BA3659F29CAE8AC0053A944 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */; };
+		851BE2D729CDAA8100532DFE /* RestNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE2D629CDAA8100532DFE /* RestNotificationView.swift */; };
+		851BE2D929CDAA8F00532DFE /* RestNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE2D829CDAA8F00532DFE /* RestNotificationController.swift */; };
+		851BE2DB29CDAAA400532DFE /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 851BE2DA29CDAAA400532DFE /* PushNotificationPayload.apns */; };
+		851BE2ED29CEC38700532DFE /* ReturnNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE2EC29CEC38700532DFE /* ReturnNotificationView.swift */; };
+		853460B729CED62700994B14 /* ReturnNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853460B629CED62700994B14 /* ReturnNotificationController.swift */; };
+		856AE93829CEE4F4007B7F72 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AE93729CEE4F4007B7F72 /* Interface.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +88,12 @@
 		0BA3659A29CAC13E0053A944 /* HomeScheduleRunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScheduleRunningView.swift; sourceTree = "<group>"; };
 		0BA3659C29CAC1550053A944 /* HomeNoScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoScheduleView.swift; sourceTree = "<group>"; };
 		0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
+		851BE2D629CDAA8100532DFE /* RestNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNotificationView.swift; sourceTree = "<group>"; };
+		851BE2D829CDAA8F00532DFE /* RestNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNotificationController.swift; sourceTree = "<group>"; };
+		851BE2DA29CDAAA400532DFE /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		851BE2EC29CEC38700532DFE /* ReturnNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnNotificationView.swift; sourceTree = "<group>"; };
+		853460B629CED62700994B14 /* ReturnNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnNotificationController.swift; sourceTree = "<group>"; };
+		856AE93729CEE4F4007B7F72 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,9 +156,11 @@
 			isa = PBXGroup;
 			children = (
 				0B11032029CC0F3B0069AF3C /* Animation.json */,
+				856AE93729CEE4F4007B7F72 /* Interface.storyboard */,
 				0B11032429CCC2720069AF3C /* Models */,
 				0BA3659229CABE6F0053A944 /* View Models */,
 				0BA3656229CABE2D0053A944 /* CareApp.swift */,
+				851BE2D529CDAA6700532DFE /* Notifications */,
 				0BA3659029CABE590053A944 /* Views */,
 				0BA3656629CABE2E0053A944 /* Assets.xcassets */,
 				0BA3656829CABE2E0053A944 /* Preview Content */,
@@ -196,6 +210,18 @@
 				0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		851BE2D529CDAA6700532DFE /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				851BE2D629CDAA8100532DFE /* RestNotificationView.swift */,
+				851BE2EC29CEC38700532DFE /* ReturnNotificationView.swift */,
+				851BE2D829CDAA8F00532DFE /* RestNotificationController.swift */,
+				853460B629CED62700994B14 /* ReturnNotificationController.swift */,
+				851BE2DA29CDAAA400532DFE /* PushNotificationPayload.apns */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +363,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BA3656A29CABE2E0053A944 /* Preview Assets.xcassets in Resources */,
+				851BE2DB29CDAAA400532DFE /* PushNotificationPayload.apns in Resources */,
 				0BA3656729CABE2E0053A944 /* Assets.xcassets in Resources */,
+				856AE93829CEE4F4007B7F72 /* Interface.storyboard in Resources */,
 				0B11032129CC0F3B0069AF3C /* Animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,14 +391,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851BE2D929CDAA8F00532DFE /* RestNotificationController.swift in Sources */,
 				0BA3656529CABE2D0053A944 /* ContentView.swift in Sources */,
 				0BA3659629CABEAD0053A944 /* UtilsModel.swift in Sources */,
 				0BA3659B29CAC13E0053A944 /* HomeScheduleRunningView.swift in Sources */,
 				0BA3659D29CAC1550053A944 /* HomeNoScheduleView.swift in Sources */,
 				0B11032329CCC2650069AF3C /* ScheduleModel.swift in Sources */,
+				851BE2ED29CEC38700532DFE /* ReturnNotificationView.swift in Sources */,
 				0BA3659F29CAE8AC0053A944 /* LottieViewModel.swift in Sources */,
+				853460B729CED62700994B14 /* ReturnNotificationController.swift in Sources */,
 				0BA3656329CABE2D0053A944 /* CareApp.swift in Sources */,
 				0BA3659429CABE800053A944 /* ScheduleView.swift in Sources */,
+				851BE2D729CDAA8100532DFE /* RestNotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

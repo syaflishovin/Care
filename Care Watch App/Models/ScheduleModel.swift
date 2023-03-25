@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 class ScheduleModel: ObservableObject {
     @Published var scheduleEndDate = UserDefaults.standard.object(forKey: "endDate") as? Date
@@ -21,7 +22,54 @@ class ScheduleModel: ObservableObject {
         return remainder
     }
     
-    func scheduleNotifications() {
-        // looping utk set notifications
+    func scheduleNotifications(totalTime: Int) {
+        let runCounter = totalTime/60
+        
+        // looping for requesting notification
+        for i in (1...runCounter) {
+            // Rest Notification
+            let content = UNMutableNotificationContent()
+            content.title = "Rest Your Eyes!"
+            content.sound = .default
+            content.categoryIdentifier = "restCategory"
+//
+            let uuidString1 = UUID().uuidString
+//
+            let category = UNNotificationCategory(identifier: "restCategory", actions: [], intentIdentifiers: [], options: [])
+            UNUserNotificationCenter.current().setNotificationCategories([category])
+
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(60*i), repeats: false)
+            let request = UNNotificationRequest(identifier: uuidString1, content: content, trigger: trigger)
+
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                } else {
+                    print("scheduled successfully")
+                }
+                }
+            
+            //            Return Notification
+                let content2 = UNMutableNotificationContent()
+                content2.title = "Go back to work!"
+                content2.sound = .default
+                content2.categoryIdentifier = "returnCategory"
+            
+                let uuidString2 = UUID().uuidString
+                
+                let category2 = UNNotificationCategory(identifier: "returnCategory", actions: [], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([category2])
+                
+                let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval((60*i)+10), repeats: false)
+                let request2 = UNNotificationRequest(identifier: uuidString2, content: content2, trigger: trigger2)
+                
+            UNUserNotificationCenter.current().add(request2) { (error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                } else {
+                    print("work scheduled successfully")
+                }
+            }
+        }
     }
 }
