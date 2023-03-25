@@ -13,5 +13,9 @@ struct Care_Watch_AppApp: App {
         WindowGroup {
             ContentView()
         }
+//#if os(watchOS)
+        WKNotificationScene(controller: RestNotificationController.self, category: "restCategory")
+        WKNotificationScene(controller: ReturnNotificationController.self, category: "returnCategory")
+//        #endif
     }
 }

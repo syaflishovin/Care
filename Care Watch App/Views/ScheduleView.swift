@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ScheduleView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -18,6 +19,8 @@ struct ScheduleView: View {
     
     private let pickerWidth: CGFloat = 60
     private let pickerHeight: CGFloat = 80
+    
+    @State private var runCounter: Int = 0
     
     
     var body: some View {
@@ -62,6 +65,10 @@ struct ScheduleView: View {
                 scheduleModel.scheduleEndDate = endDate
                 scheduleModel.isScheduleActive = true
                 self.presentationMode.wrappedValue.dismiss()
+                
+                let totalTime = utils.getSeconds(hours: selectedHours, minutes: selectedMinutes)
+                
+                scheduleModel.scheduleNotifications(totalTime: totalTime)
             }
             .tint(.accentColor)
             .clipShape(Capsule())
