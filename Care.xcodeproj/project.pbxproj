@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B11032129CC0F3B0069AF3C /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B11032029CC0F3B0069AF3C /* Animation.json */; };
 		0B11032329CCC2650069AF3C /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B11032229CCC2650069AF3C /* ScheduleModel.swift */; };
 		0BA3655E29CABE2D0053A944 /* Care Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0BA3655D29CABE2D0053A944 /* Care Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BA3656329CABE2D0053A944 /* CareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3656229CABE2D0053A944 /* CareApp.swift */; };
@@ -29,6 +28,7 @@
 		851BE2ED29CEC38700532DFE /* ReturnNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE2EC29CEC38700532DFE /* ReturnNotificationView.swift */; };
 		853460B729CED62700994B14 /* ReturnNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853460B629CED62700994B14 /* ReturnNotificationController.swift */; };
 		856AE93829CEE4F4007B7F72 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AE93729CEE4F4007B7F72 /* Interface.storyboard */; };
+		858E866329D0405100ECFAF7 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 858E866229D0405000ECFAF7 /* Animation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B11032029CC0F3B0069AF3C /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 		0B11032229CCC2650069AF3C /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		0BA3655729CABE2D0053A944 /* Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Care.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA3655D29CABE2D0053A944 /* Care Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Care Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +93,7 @@
 		851BE2EC29CEC38700532DFE /* ReturnNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnNotificationView.swift; sourceTree = "<group>"; };
 		853460B629CED62700994B14 /* ReturnNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnNotificationController.swift; sourceTree = "<group>"; };
 		856AE93729CEE4F4007B7F72 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		858E866229D0405000ECFAF7 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 		0BA3656129CABE2D0053A944 /* Care Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				0B11032029CC0F3B0069AF3C /* Animation.json */,
+				858E866229D0405000ECFAF7 /* Animation.json */,
 				856AE93729CEE4F4007B7F72 /* Interface.storyboard */,
 				0B11032429CCC2720069AF3C /* Models */,
 				0BA3659229CABE6F0053A944 /* View Models */,
@@ -366,7 +366,7 @@
 				851BE2DB29CDAAA400532DFE /* PushNotificationPayload.apns in Resources */,
 				0BA3656729CABE2E0053A944 /* Assets.xcassets in Resources */,
 				856AE93829CEE4F4007B7F72 /* Interface.storyboard in Resources */,
-				0B11032129CC0F3B0069AF3C /* Animation.json in Resources */,
+				858E866329D0405100ECFAF7 /* Animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

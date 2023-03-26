@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21507" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="watch38"/>
+    <device id="watch44"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21501"/>
     </dependencies>
@@ -17,7 +17,7 @@
             <objects>
                 <notificationController id="raz-qL-WgM" customClass="RestNotificationController" customModule="Care_Watch_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Rest Your Eyes!" textAlignment="left" id="MK1-xu-6Kh"/>
+                        <label alignment="left" text="Label" textAlignment="left" id="MK1-xu-6Kh"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="restCategory" wantsSashBlur="YES" id="1k3-dP-Jtr">
                         <color key="sashColor" red="0.60784316059999999" green="0.91764706370000004" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -30,14 +30,34 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="-247" y="-226"/>
+            <point key="canvasLocation" x="-265" y="-527"/>
+        </scene>
+        <!--Rest Notification Controller-->
+        <scene sceneID="ZvV-Na-K6a">
+            <objects>
+                <controller id="yEZ-3i-aIh" customClass="RestNotificationController" customModule="Care_Watch_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="-650"/>
+        </scene>
+        <!--Dynamic Notification Interface Controller-->
+        <scene sceneID="Y3t-ra-fUs">
+            <objects>
+                <controller id="xXm-y6-zWi">
+                    <items>
+                        <label height="37" alignment="left" text="Label" id="n0N-SZ-dVy">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="9.6086956521739122" y="-376.42857142857144"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="bud-q6-n0V">
             <objects>
-                <notificationController id="eCk-JC-S3N" customClass="ReturnNotificationController" customModule="Care_Watch_App" customModuleProvider="target">
+                <notificationController id="eCk-JC-S3N">
                     <items>
-                        <label alignment="left" text="Go Back To Work!" id="xo7-1z-Kji"/>
+                        <label alignment="left" text="Label" id="xo7-1z-Kji"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="returnCategory" id="tUh-Dd-zxi">
                         <color key="sashColor" red="0.60784316059999999" green="0.91764706370000004" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -50,35 +70,27 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="-548" y="-302"/>
+            <point key="canvasLocation" x="-1019" y="-527"/>
         </scene>
-        <!--Dynamic Notification Interface Controller-->
-        <scene sceneID="Y3t-ra-fUs">
-            <objects>
-                <controller id="xXm-y6-zWi"/>
-            </objects>
-            <point key="canvasLocation" x="53" y="-226"/>
-        </scene>
-        <!--Dynamic Interactive Notification Interface Controller-->
-        <scene sceneID="ZvV-Na-K6a">
-            <objects>
-                <controller id="yEZ-3i-aIh"/>
-            </objects>
-            <point key="canvasLocation" x="53" y="-526"/>
-        </scene>
-        <!--Dynamic Notification Interface Controller-->
+        <!--Return Notification Control-->
         <scene sceneID="JC9-85-fgz">
             <objects>
-                <controller id="PqR-5M-3k6"/>
+                <controller id="PqR-5M-3k6" customClass="ReturnNotificationControl">
+                    <items>
+                        <label width="53" height="28" alignment="left" text="Label" id="qUs-jk-Gf8">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="-248" y="-302"/>
+            <point key="canvasLocation" x="-748" y="-376.42857142857144"/>
         </scene>
-        <!--Dynamic Interactive Notification Interface Controller-->
+        <!--Return Notification Controller-->
         <scene sceneID="5he-8R-FmR">
             <objects>
-                <controller id="TVy-3D-8CB"/>
+                <controller id="TVy-3D-8CB" customClass="ReturnNotificationController" customModule="Care_Watch_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="-602"/>
+            <point key="canvasLocation" x="-748" y="-682"/>
         </scene>
     </scenes>
 </document>

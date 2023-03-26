@@ -22,6 +22,7 @@ class ScheduleModel: ObservableObject {
         return remainder
     }
     
+    
     func scheduleNotifications(totalTime: Int) {
         let runCounter = totalTime/60
         

@@ -99,7 +99,7 @@ class LottieViewModel: ObservableObject {
         playing = true
 
         animationTimer?.invalidate()
-        animationTimer = Timer.scheduledTimer(withTimeInterval: 0.05/speed, repeats: true, block: { (timer) in
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 0.0125/speed, repeats: true, block: { (timer) in
             guard self.playing else {
                 timer.invalidate()
                 return
