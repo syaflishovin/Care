@@ -17,6 +17,7 @@ struct ReturnNotificationView: View {
                         .onAppear {
                                    self.viewModel.loadAnimationFromFile(filename: "Animation")
                                }
+                        .cornerRadius(10)
                         .scaledToFit()
                         
 //                        .ignoresSafeArea(.all)

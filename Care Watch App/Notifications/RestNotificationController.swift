@@ -10,6 +10,10 @@ import SwiftUI
 import UserNotifications
 
 class RestNotificationController: WKUserNotificationHostingController<RestNotificationView> {
+    
+//    class override var sashColor: Color? {
+//            return .blue
+//        }
 
     var title: String?
     var message: String?
@@ -33,9 +37,6 @@ class RestNotificationController: WKUserNotificationHostingController<RestNotifi
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
-
-      
-        
         
 //
 //        let notificationData =
@@ -50,3 +51,4 @@ class RestNotificationController: WKUserNotificationHostingController<RestNotifi
             
     }
 }
+
