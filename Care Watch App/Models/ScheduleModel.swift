@@ -9,8 +9,24 @@ import Foundation
 import UserNotifications
 
 class ScheduleModel: ObservableObject {
+    let pathWhenRunning = "ScheduleRunning"
+    let pathWhenNotRunning = "SetSchedule"
+    
     @Published var scheduleEndDate = UserDefaults.standard.object(forKey: "endDate") as? Date
     @Published var isScheduleActive = false
+    @Published var userPath = UserDefaults.standard.array(forKey: "userPath") as? [String]
+    
+    func checkActive() -> Bool {
+        if let endDate = scheduleEndDate {
+            if endDate > Date() {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    }
     
     func getRemainingTime() -> Int {
         let currentDate = Date()
@@ -18,6 +34,8 @@ class ScheduleModel: ObservableObject {
         
         if let endDate = scheduleEndDate {
             remainder = Int(endDate.timeIntervalSince(currentDate))
+            print(endDate)
+            print(remainder)
         }
         return remainder
     }

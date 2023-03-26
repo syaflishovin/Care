@@ -21,11 +21,11 @@ struct HomeNoScheduleView: View {
                     .frame(maxWidth: .infinity)
                     .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
                 
-                NavigationLink(destination: ScheduleView()) {
-                    Text("Start")
-                }
-                .tint(.accentColor)
-                .clipShape(Capsule())
+//                NavigationLink(destination: ScheduleView()) {
+//                    Text("Start")
+//                }
+//                .tint(.accentColor)
+//                .clipShape(Capsule())
             }
         }
         .edgesIgnoringSafeArea(.bottom)

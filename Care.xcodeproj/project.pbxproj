@@ -22,13 +22,15 @@
 		0BA3659B29CAC13E0053A944 /* HomeScheduleRunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659A29CAC13E0053A944 /* HomeScheduleRunningView.swift */; };
 		0BA3659D29CAC1550053A944 /* HomeNoScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659C29CAC1550053A944 /* HomeNoScheduleView.swift */; };
 		0BA3659F29CAE8AC0053A944 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */; };
+		0BBB1C9B29D08CD700D4FAE5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB1C9A29D08CD700D4FAE5 /* Router.swift */; };
+		0BED2AE529D039F3009A89A8 /* Phase 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BED2AE429D039F3009A89A8 /* Phase 4.json */; };
+		0BED2AEC29D04796009A89A8 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BED2AEB29D04796009A89A8 /* Animation.json */; };
 		851BE2D729CDAA8100532DFE /* RestNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE2D629CDAA8100532DFE /* RestNotificationView.swift */; };
 		851BE2D929CDAA8F00532DFE /* RestNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE2D829CDAA8F00532DFE /* RestNotificationController.swift */; };
 		851BE2DB29CDAAA400532DFE /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 851BE2DA29CDAAA400532DFE /* PushNotificationPayload.apns */; };
 		851BE2ED29CEC38700532DFE /* ReturnNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE2EC29CEC38700532DFE /* ReturnNotificationView.swift */; };
 		853460B729CED62700994B14 /* ReturnNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853460B629CED62700994B14 /* ReturnNotificationController.swift */; };
 		856AE93829CEE4F4007B7F72 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AE93729CEE4F4007B7F72 /* Interface.storyboard */; };
-		858E866329D0405100ECFAF7 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 858E866229D0405000ECFAF7 /* Animation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,9 @@
 		0BA3659A29CAC13E0053A944 /* HomeScheduleRunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScheduleRunningView.swift; sourceTree = "<group>"; };
 		0BA3659C29CAC1550053A944 /* HomeNoScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoScheduleView.swift; sourceTree = "<group>"; };
 		0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
+		0BBB1C9A29D08CD700D4FAE5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0BED2AE429D039F3009A89A8 /* Phase 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Phase 4.json"; sourceTree = "<group>"; };
+		0BED2AEB29D04796009A89A8 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 		851BE2D629CDAA8100532DFE /* RestNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNotificationView.swift; sourceTree = "<group>"; };
 		851BE2D829CDAA8F00532DFE /* RestNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNotificationController.swift; sourceTree = "<group>"; };
 		851BE2DA29CDAAA400532DFE /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 			children = (
 				0B11032229CCC2650069AF3C /* ScheduleModel.swift */,
 				0BA3659529CABEAD0053A944 /* UtilsModel.swift */,
+				0BBB1C9A29D08CD700D4FAE5 /* Router.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +144,7 @@
 				0BA3657229CABE2E0053A944 /* Care Watch AppTests */,
 				0BA3657C29CABE2E0053A944 /* Care Watch AppUITests */,
 				0BA3655829CABE2D0053A944 /* Products */,
+				0BED2AE629D0440D009A89A8 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,7 +162,8 @@
 		0BA3656129CABE2D0053A944 /* Care Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				858E866229D0405000ECFAF7 /* Animation.json */,
+				0BED2AEB29D04796009A89A8 /* Animation.json */,
+				0BED2AE429D039F3009A89A8 /* Phase 4.json */,
 				856AE93729CEE4F4007B7F72 /* Interface.storyboard */,
 				0B11032429CCC2720069AF3C /* Models */,
 				0BA3659229CABE6F0053A944 /* View Models */,
@@ -210,6 +218,14 @@
 				0BA3659E29CAE8AC0053A944 /* LottieViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		0BED2AE629D0440D009A89A8 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				858E866229D0405000ECFAF7 /* Animation.json */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		851BE2D529CDAA6700532DFE /* Notifications */ = {
@@ -364,9 +380,10 @@
 			files = (
 				0BA3656A29CABE2E0053A944 /* Preview Assets.xcassets in Resources */,
 				851BE2DB29CDAAA400532DFE /* PushNotificationPayload.apns in Resources */,
+				0BED2AEC29D04796009A89A8 /* Animation.json in Resources */,
 				0BA3656729CABE2E0053A944 /* Assets.xcassets in Resources */,
+				0BED2AE529D039F3009A89A8 /* Phase 4.json in Resources */,
 				856AE93829CEE4F4007B7F72 /* Interface.storyboard in Resources */,
-				858E866329D0405100ECFAF7 /* Animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +420,7 @@
 				0BA3656329CABE2D0053A944 /* CareApp.swift in Sources */,
 				0BA3659429CABE800053A944 /* ScheduleView.swift in Sources */,
 				851BE2D729CDAA8100532DFE /* RestNotificationView.swift in Sources */,
+				0BBB1C9B29D08CD700D4FAE5 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

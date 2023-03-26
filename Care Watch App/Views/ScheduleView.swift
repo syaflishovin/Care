@@ -9,10 +9,11 @@ import SwiftUI
 import UserNotifications
 
 struct ScheduleView: View {
-    @Environment(\.presentationMode) var presentationMode
     @ObservedObject private var utils = UtilsModel()
     @EnvironmentObject var scheduleModel: ScheduleModel
+    @EnvironmentObject var router: Router
     
+//    @Binding var userPath: [String]
     @State private var selectedHours: Int = 4
     @State private var selectedMinutes: Int = 0
     @State private var isButtonEnabled = false
@@ -22,12 +23,10 @@ struct ScheduleView: View {
     
     @State private var runCounter: Int = 0
     
-    
     var body: some View {
         VStack {
             Text("How long are you working today?")
                 .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
                 .foregroundColor(.gray)
             
             HStack(alignment: .center, spacing: 10) {
@@ -57,23 +56,25 @@ struct ScheduleView: View {
             }
             .padding(EdgeInsets(top: 4, leading: 0, bottom: 8, trailing: 0))
             
-            Button(
-                "Schedule now"
-            ) {
-                let endDate = utils.getEndDate(hours: selectedHours, minutes: selectedMinutes)
-                UserDefaults.standard.set(endDate, forKey: "endDate")
-                scheduleModel.scheduleEndDate = endDate
-                scheduleModel.isScheduleActive = true
-                self.presentationMode.wrappedValue.dismiss()
-                
-                let totalTime = utils.getSeconds(hours: selectedHours, minutes: selectedMinutes)
-                
-                scheduleModel.scheduleNotifications(totalTime: totalTime)
+            NavigationLink(value: "ScheduleRunning") {
+                Text("Schedule now")
             }
             .tint(.accentColor)
             .clipShape(Capsule())
             .disabled(isButtonEnabled)
+            .simultaneousGesture(TapGesture().onEnded({ _ in
+                let endDate = utils.getEndDate(hours: selectedHours, minutes: selectedMinutes)
+                
+                UserDefaults.standard.set(endDate, forKey: "endDate")
+                
+                scheduleModel.scheduleEndDate = endDate
+
+                let totalTime = utils.getSeconds(hours: selectedHours, minutes: selectedMinutes)
+                
+                scheduleModel.scheduleNotifications(totalTime: totalTime)
+            }))
         }
+        .frame(maxHeight: .infinity)
         .edgesIgnoringSafeArea(.bottom)
     }
 }
