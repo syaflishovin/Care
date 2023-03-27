@@ -34,6 +34,8 @@ struct ContentView: View {
                     ScheduleView()
                 } else if page == "ScheduleRunning" {
                     HomeScheduleRunningView()
+                } else if page == "Complete" {
+                    CompletionView()
                 } else {
                     VStack {
                         Button("Back to home") {

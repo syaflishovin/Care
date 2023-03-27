@@ -40,6 +40,10 @@ class ScheduleModel: ObservableObject {
         return remainder
     }
     
+    func removeNotifications() {
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
     
     func scheduleNotifications(totalTime: Int) {
         let runCounter = totalTime/60
@@ -79,7 +83,7 @@ class ScheduleModel: ObservableObject {
                 let category2 = UNNotificationCategory(identifier: "returnCategory", actions: [], intentIdentifiers: [], options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([category2])
                 
-                let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval((60*i)+10), repeats: false)
+                let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval((60*i)+20), repeats: false)
                 let request2 = UNNotificationRequest(identifier: uuidString2, content: content2, trigger: trigger2)
                 
             UNUserNotificationCenter.current().add(request2) { (error) in

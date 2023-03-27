@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeScheduleRunningView: View {
     @Environment(\.scenePhase) var scenePhase
-    @Environment(\.presentationMode) var presentationMode
     
     @EnvironmentObject var scheduleModel: ScheduleModel
     @EnvironmentObject var router: Router
@@ -27,8 +26,8 @@ struct HomeScheduleRunningView: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    private let animWidth = 90.0
-    private let animHeight = 90.0
+    private var animWidth = 90.0
+    private var animHeight = 90.0
     @State private var defaultTab = 1
     
     var body: some View {
@@ -38,11 +37,13 @@ struct HomeScheduleRunningView: View {
                     let endDate: Date? = nil
                     
                     UserDefaults.standard.set(endDate, forKey: "endDate")
-                    
                     scheduleModel.scheduleEndDate = endDate
+                    scheduleModel.removeNotifications()
                     
                     timer.upstream.connect().cancel()
+                    
                     router.reset()
+                    router.path.append("Complete")
                 } label: {
                     Image(systemName: "xmark")
                 }
@@ -62,7 +63,15 @@ struct HomeScheduleRunningView: View {
                     .resizable()
                     .frame(width: animWidth, height: animHeight)
                     .onAppear {
-                        self.viewModel.loadAnimationFromFile(filename: "Phase 4")
+                        if remainingTime > (3600*3) {
+                            self.viewModel.loadAnimationFromFile(filename: "Phase 4")
+                        } else if remainingTime > (3600*2) {
+                            self.viewModel.loadAnimationFromFile(filename: "Phase 3")
+                        } else if remainingTime > (3600*1) {
+                            self.viewModel.loadAnimationFromFile(filename: "Phase 2")
+                        } else {
+                            self.viewModel.loadAnimationFromFile(filename: "Phase 1")
+                        }
                     }
                 
                 Text("Current schedule running for:")
@@ -89,8 +98,11 @@ struct HomeScheduleRunningView: View {
                         remainingTime -= 1
                         updateTimer(remaining: remainingTime)
                     } else {
+                        scheduleModel.removeNotifications()
                         timer.upstream.connect().cancel()
+                        
                         router.reset()
+                        router.path.append("Complete")
                     }
                 }
                 .padding(EdgeInsets(top: 4, leading: 0, bottom: 16, trailing: 0))

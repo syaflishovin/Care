@@ -10,7 +10,7 @@ struct RestNotificationView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var ringAnimation: CGFloat = 0
     @State private var counter = 20
-    var count = 10
+    var count = 20
     
     var body: some View {
         VStack{
