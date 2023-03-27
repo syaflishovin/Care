@@ -9,8 +9,24 @@ import Foundation
 import UserNotifications
 
 class ScheduleModel: ObservableObject {
+    let pathWhenRunning = "ScheduleRunning"
+    let pathWhenNotRunning = "SetSchedule"
+    
     @Published var scheduleEndDate = UserDefaults.standard.object(forKey: "endDate") as? Date
     @Published var isScheduleActive = false
+    @Published var userPath = UserDefaults.standard.array(forKey: "userPath") as? [String]
+    
+    func checkActive() -> Bool {
+        if let endDate = scheduleEndDate {
+            if endDate > Date() {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    }
     
     func getRemainingTime() -> Int {
         let currentDate = Date()
@@ -18,10 +34,16 @@ class ScheduleModel: ObservableObject {
         
         if let endDate = scheduleEndDate {
             remainder = Int(endDate.timeIntervalSince(currentDate))
+            print(endDate)
+            print(remainder)
         }
         return remainder
     }
     
+    func removeNotifications() {
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
     
     func scheduleNotifications(totalTime: Int) {
         let runCounter = totalTime/60
@@ -61,7 +83,7 @@ class ScheduleModel: ObservableObject {
                 let category2 = UNNotificationCategory(identifier: "returnCategory", actions: [], intentIdentifiers: [], options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([category2])
                 
-                let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval((60*i)+10), repeats: false)
+                let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval((60*i)+20), repeats: false)
                 let request2 = UNNotificationRequest(identifier: uuidString2, content: content2, trigger: trigger2)
                 
             UNUserNotificationCenter.current().add(request2) { (error) in

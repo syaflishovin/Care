@@ -15,10 +15,14 @@ class UtilsModel: ObservableObject {
             print("Add hours to date failed")
             return nil
         }
+        
         guard let result = Calendar.current.date(byAdding: .minute, value: minutes, to: temp) else {
             print("Date conversion failed")
             return nil
         }
+        
+        print(now)
+        print(result)
 
         return result
     }
