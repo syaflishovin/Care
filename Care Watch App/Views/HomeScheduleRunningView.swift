@@ -64,13 +64,13 @@ struct HomeScheduleRunningView: View {
                     .frame(width: animWidth, height: animHeight)
                     .onAppear {
                         if remainingTime > (3600*3) {
-                            self.viewModel.loadAnimationFromFile(filename: "Phase 4")
-                        } else if remainingTime > (3600*2) {
-                            self.viewModel.loadAnimationFromFile(filename: "Phase 3")
-                        } else if remainingTime > (3600*1) {
-                            self.viewModel.loadAnimationFromFile(filename: "Phase 2")
-                        } else {
                             self.viewModel.loadAnimationFromFile(filename: "Phase 1")
+                        } else if remainingTime > (3600*2) {
+                            self.viewModel.loadAnimationFromFile(filename: "Phase 2")
+                        } else if remainingTime > (3600*1) {
+                            self.viewModel.loadAnimationFromFile(filename: "Phase 3")
+                        } else {
+                            self.viewModel.loadAnimationFromFile(filename: "Phase 4")
                         }
                     }
                 
